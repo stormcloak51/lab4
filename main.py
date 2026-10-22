@@ -1,12 +1,22 @@
-age = int(input("Введите возраст: "))
+from math import sqrt
 
-if age < 0:
-    print("Некорректный возраст")
-elif age <= 12:
-    print("Ребёнок")
-elif age <= 17:
-    print("Подросток")
-elif age <= 64:
-    print("Взрослый")
+a, b, c = (
+    float(input("Введите a: ")),
+    float(input("Введите b: ")),
+    float(input("Введите c: ")),
+)
+
+if a == 0:
+    print("Это не квадратное уравнение")
 else:
-    print("Пожилой")
+    D = b**2 - 4 * a * c
+
+    if D > 0:
+        x1 = (-b + sqrt(D)) / (2 * a)
+        x2 = (-b - sqrt(D)) / (2 * a)
+        print(f"Два корня: x1 = {x1:.2f}, x2 = {x2:.2f}")
+    elif D == 0:
+        x = -b / (2 * a)
+        print(f"Один корень: x = {x:.2f}")
+    else:
+        print("Нет действительных корней")
