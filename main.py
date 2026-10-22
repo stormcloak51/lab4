@@ -1,15 +1,10 @@
-from random import randint
-
-n = randint(1, 100)
-print(n)
-flag = False
-while not flag:
-    x = int(input("Введите число: "))
-
-    if x > n:
-        print("больше")
-    elif x < n:
-        print("меньше")
-    else:
-        flag = True
-        print("Угадал")
+try:
+    N = int(input("Введите число в десятичной системе: "))
+    binN = bin(N)[2:]
+    octN = oct(N)[2:]
+    hexN = hex(N)[2:]
+    print(f"Число {N} в двоичной системе: {binN}")
+    print(f"Число {N} в восьмеричной системе: {octN}")
+    print(f"Число {N} в шестнадцатеричной системе: {hexN}")
+except ValueError:
+    print("Введите корректное число")
