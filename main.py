@@ -1,14 +1,19 @@
-height = float(input("Введите рост (м): "))
-weight = float(input("Введите вес (кг): "))
+x = int(input("Введите координату x: "))
+y = int(input("Введите координату y: "))
 
-imt = weight / (height**2)
-print(f"ИМТ: {imt:.1f}")
-
-if imt < 18.5:
-    print("Недостаточный вес")
-elif imt < 25:
-    print("Норма")
-elif imt < 30:
-    print("Избыточный вес")
+if x == y == 0:
+    print("В начале отсчета")
+elif x == 0:
+    print("На оси ординат")
+elif y == 0:
+    print("На оси абсцисс")
+elif x > 0:
+    if y > 0:
+        print("В первой четверти")
+    elif y < 0:
+        print("В четвертой четверти")
 else:
-    print("Ожирение")
+    if y > 0:
+        print("Во второй четверти")
+    elif y < 0:
+        print("В третьей четверти")
