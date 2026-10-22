@@ -1,18 +1,12 @@
-a, b, c = (
-    float(input("Введите 1 число: ")),
-    float(input("Введите 2 число: ")),
-    float(input("Введите 3 число: ")),
-)
+age = int(input("Введите возраст: "))
 
-if a >= b and a >= c:
-    maxi = a
-elif b >= a and b >= c:
-    maxi = b
+if age < 0:
+    print("Некорректный возраст")
+elif age <= 12:
+    print("Ребёнок")
+elif age <= 17:
+    print("Подросток")
+elif age <= 64:
+    print("Взрослый")
 else:
-    maxi = c
-
-print(f"Максимум - {maxi}")
-
-# ====== ДОПОЛНИТЕЛЬНО ======
-
-print(f"Максимум - {max(a, b, c)}")
+    print("Пожилой")
