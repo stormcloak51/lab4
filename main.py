@@ -1,15 +1,15 @@
-a, b, c = (
-    float(input("Введите сторону a: ")),
-    float(input("Введите сторону b: ")),
-    float(input("Введите сторону c: ")),
-)
+from random import randint
 
-if a + b > c and a + c > b and b + c > a:
-    if a == b == c:
-        print("Равносторонний треугольник")
-    elif a == b or a == c or b == c:
-        print("Равнобедренный треугольник")
+n = randint(1, 100)
+print(n)
+flag = False
+while not flag:
+    x = int(input("Введите число: "))
+
+    if x > n:
+        print("больше")
+    elif x < n:
+        print("меньше")
     else:
-        print("Разносторонний треугольник")
-else:
-    print("Треугольник не существует")
+        flag = True
+        print("Угадал")
