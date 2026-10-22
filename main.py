@@ -1,21 +1,18 @@
-number = int(input("Введите число: "))
+a, b, c = (
+    float(input("Введите 1 число: ")),
+    float(input("Введите 2 число: ")),
+    float(input("Введите 3 число: ")),
+)
 
-if number % 2 == 0:
-    print(f"Число {number} - чётное")
+if a >= b and a >= c:
+    maxi = a
+elif b >= a and b >= c:
+    maxi = b
 else:
-    print(f"Число {number} - нечётное")
+    maxi = c
 
-# ==== ДОПОЛНИТЕЛЬНЫЕ ЗАДАНИЯ ======
+print(f"Максимум - {maxi}")
 
+# ====== ДОПОЛНИТЕЛЬНО ======
 
-if number % 3 == 0:
-    print(f"Число {number} делится на 3")
-else:
-    print(f"Число {number} не делится на 3")
-
-if number > 0:
-    print(f"Число {number} - положительное")
-elif number < 0:
-    print(f"Число {number} - отрицательное")
-else:
-    print(f"Число {number} - ноль")
+print(f"Максимум - {max(a, b, c)}")
