@@ -1,10 +1,14 @@
-try:
-    N = int(input("Введите число в десятичной системе: "))
-    binN = bin(N)[2:]
-    octN = oct(N)[2:]
-    hexN = hex(N)[2:]
-    print(f"Число {N} в двоичной системе: {binN}")
-    print(f"Число {N} в восьмеричной системе: {octN}")
-    print(f"Число {N} в шестнадцатеричной системе: {hexN}")
-except ValueError:
-    print("Введите корректное число")
+height = float(input("Введите рост (м): "))
+weight = float(input("Введите вес (кг): "))
+
+imt = weight / (height**2)
+print(f"ИМТ: {imt:.1f}")
+
+if imt < 18.5:
+    print("Недостаточный вес")
+elif imt < 25:
+    print("Норма")
+elif imt < 30:
+    print("Избыточный вес")
+else:
+    print("Ожирение")
